@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Enrico Andria | Consulente manageriale per PA e sanità, Sassari</title>
   <meta name="description" content="Pianificazione strategica, PIAO, project management, change management e bandi di finanziamento per pubbliche amministrazioni e organizzazioni sanitarie. Sassari.">
@@ -13,6 +13,7 @@
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/newsreader-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/main.js"></script>
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="it_IT">
@@ -72,10 +73,11 @@
 
   <main id="contenuto">
     <section class="hero">
+      <canvas class="hero__fx" aria-hidden="true"></canvas>
       <div class="wrap hero__grid">
         <div class="hero__text">
           <p class="eyebrow">Consulente manageriale per PA e sanità · Sassari</p>
-          <h1>Dalla visione all’<em>indicatore</em>.</h1>
+          <h1><span class="h-line"><span>Dalla visione</span></span> <span class="h-line"><span>all’<em>indicatore</em>.</span></span></h1>
           <p class="lead">Aiuto enti pubblici e organizzazioni sanitarie a tradurre gli indirizzi strategici in obiettivi, azioni e risultati che si possono verificare.</p>
           <p class="actions">
             <a class="btn" href="#contatti">Parliamone</a>
@@ -92,11 +94,16 @@
       </div>
     </section>
 
-    <section id="servizi" class="section">
-      <div class="wrap">
-        <h2 class="section__title">Servizi</h2>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track"><span>Pianificazione strategica</span><span>PIAO</span><span>Valore pubblico</span><span>Project management</span><span>Change management</span><span>Percorsi assistenziali</span><span>Monitoraggio</span><span>Bandi e finanza agevolata</span><span>Pianificazione strategica</span><span>PIAO</span><span>Valore pubblico</span><span>Project management</span><span>Change management</span><span>Percorsi assistenziali</span><span>Monitoraggio</span><span>Bandi e finanza agevolata</span></div>
+    </div>
 
-        <article class="service">
+    <section id="servizi" class="section">
+      <div class="wrap services">
+        <h2 class="section__title reveal">Servizi</h2>
+        <div class="services__list">
+
+        <article class="service reveal">
           <p class="service__num" aria-hidden="true">1</p>
           <div class="service__head">
             <h3>Pianificazione strategica e PIAO</h3>
@@ -111,7 +118,7 @@
           </ul>
         </article>
 
-        <article class="service">
+        <article class="service reveal">
           <p class="service__num" aria-hidden="true">2</p>
           <div class="service__head">
             <h3>Project management, cambiamento e processi sanitari</h3>
@@ -126,7 +133,7 @@
           </ul>
         </article>
 
-        <article class="service">
+        <article class="service reveal">
           <p class="service__num" aria-hidden="true">3</p>
           <div class="service__head">
             <h3>Bandi e finanza agevolata</h3>
@@ -139,26 +146,27 @@
             <li>Accesso al credito per imprese e categorie svantaggiate con strumenti di microfinanza.</li>
           </ul>
         </article>
+        </div>
       </div>
     </section>
 
     <section id="metodo" class="section section--dark">
       <div class="wrap">
-        <h2 class="section__title">Come lavoro</h2>
+        <h2 class="section__title reveal">Come lavoro</h2>
         <ol class="steps" role="list">
-          <li>
+          <li class="reveal">
             <h3>Capire il contesto</h3>
             <p>Parto dall’analisi del contesto interno ed esterno e da come l’organizzazione funziona oggi.</p>
           </li>
-          <li>
+          <li class="reveal">
             <h3>Allineare le persone</h3>
             <p>Mappo gli stakeholder e organizzo incontri di allineamento con le strutture che dovranno attuare le scelte.</p>
           </li>
-          <li>
+          <li class="reveal">
             <h3>Rendere misurabile</h3>
             <p>Definisco indicatori, valori di partenza e target per rendere verificabili gli obiettivi.</p>
           </li>
-          <li>
+          <li class="reveal">
             <h3>Seguire l’attuazione</h3>
             <p>Monitoraggio, presidio in loco e miglioramento continuo: il lavoro non finisce con il documento.</p>
           </li>
@@ -168,13 +176,13 @@
 
     <section id="profilo" class="section">
       <div class="wrap profile">
-        <h2 class="section__title">Profilo</h2>
-        <div class="profile__text">
+        <h2 class="section__title reveal">Profilo</h2>
+        <div class="profile__text reveal">
           <p class="profile__lead">Sono un consulente manageriale con base a Sassari. Lavoro in partita IVA e mi occupo soprattutto di organizzazioni pubbliche e sanitarie.</p>
           <p>Ho affiancato aziende sanitarie pubbliche su pianificazione strategica, PIAO, project management e revisione dei percorsi assistenziali. Ho contribuito anche alla progettazione operativa di un intervento di supporto domiciliare per anziani fragili.</p>
           <p>Conosco la sanità territoriale anche da un altro punto di vista: ho ruoli da amministratore o da socio in imprese attive nei servizi sanitari domiciliari e faccio parte del consiglio direttivo di un’organizzazione di volontariato sanitario.</p>
         </div>
-        <div class="profile__edu">
+        <div class="profile__edu reveal">
           <h3>Formazione</h3>
           <ul role="list">
             <li><strong>Percorso di laurea magistrale in Management delle Organizzazioni Pubbliche e Sanitarie</strong><span>Università degli Studi di Roma. Esami conclusi, in attesa della discussione della tesi.</span></li>
@@ -187,9 +195,9 @@
 
     <section id="contatti" class="contact">
       <div class="wrap">
-        <h2>Hai un piano da scrivere, un progetto da far partire o un bando da valutare?</h2>
-        <a class="contact__mail" href="mailto:andriaenrico@icloud.com">andriaenrico@icloud.com</a>
-        <dl class="contact__list">
+        <h2 class="reveal">Hai un piano da scrivere, un progetto da far partire o un bando da valutare?</h2>
+        <a class="contact__mail reveal" href="mailto:andriaenrico@icloud.com">andriaenrico@icloud.com</a>
+        <dl class="contact__list reveal">
           <div><dt>Telefono</dt><dd><a href="tel:+393400811039">+39 340 081 1039</a></dd></div>
           <div><dt>PEC</dt><dd><a href="mailto:andriaenrico@pec.it">andriaenrico@pec.it</a></dd></div>
           <div><dt>Sede</dt><dd>Sassari</dd></div>
