@@ -96,12 +96,12 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid var(--amber); outline-o
   color: var(--cream);
 }
 .hero__fx { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
-.hero__grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: clamp(2.5rem, 5vw, 5rem); align-items: center; }
+.hero__grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: clamp(2.5rem, 5vw, 5rem); align-items: center; }
 .eyebrow { font-size: .98rem; color: var(--mist); margin-bottom: 1.6rem; animation: fade-up .9s var(--ease) both .1s; }
 h1 {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: clamp(3.3rem, 9.4vw, 8.6rem);
+  font-size: clamp(4rem, 7.1vw, 7.2rem);
   line-height: .96;
   letter-spacing: -.03em;
 }
@@ -281,6 +281,7 @@ h1 em {
 
 @media (max-width: 62rem) {
   .hero { min-height: 0; }
+  h1 { font-size: clamp(2.9rem, 14vw, 7.2rem); }
   .hero__grid { grid-template-columns: minmax(0, 1fr); }
   .services { grid-template-columns: minmax(0, 1fr); }
   .services .section__title { position: static; }
